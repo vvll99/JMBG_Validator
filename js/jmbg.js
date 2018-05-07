@@ -35,6 +35,9 @@ function check(){
         resetFields();
         return
     } 
+    
+    getDayOfBirth();
+    
 }
 
 function isControlValid(){
@@ -66,4 +69,18 @@ function isControlValid(){
         return false;
     }
     
+}
+
+function getDayOfBirth(){
+    var jmbgValue = jmbg.value;
+    var day = jmbgValue.substr(0,2);
+    var month = jmbgValue.substr(2,2);
+    var year = jmbgValue.substr(4,3);
+       
+    if(day <= 31 && month <= 12 ){
+          birthDate.innerHTML = day + ". " + month + ". " + "1" + year + ".";
+       }
+    if(day <= 31 && month <= 12 && year <= 99){        
+          birthDate.innerHTML = day + "." + month + "." + "2" + year + ".";
+       }
 }
