@@ -27,4 +27,43 @@ function check(){
         resetFields();
         return
     } 
+    
+    var control = isControlValid();
+    
+    if(control == false){
+        message.innerHTML = "Neispravna kontrolna cifra";
+        resetFields();
+        return
+    } 
+}
+
+function isControlValid(){
+    var jmbgValue = jmbg.value;
+    var a1 = jmbgValue.substr(0,1);
+    var a2 = jmbgValue.substr(1,1);
+    var a3 = jmbgValue.substr(2,1);
+    var a4 = jmbgValue.substr(3,1);
+    var a5 = jmbgValue.substr(4,1);
+    var a6 = jmbgValue.substr(5,1);
+    var a7 = jmbgValue.substr(6,1);
+    var a8 = jmbgValue.substr(7,1);
+    var a9 = jmbgValue.substr(8,1);
+    var a10 = jmbgValue.substr(9,1);
+    var a11 = jmbgValue.substr(10,1);
+    var a12 = jmbgValue.substr(11,1);
+    var a13 = jmbgValue.substr(12,1);
+   
+    var s = 7*a1 + 6*a2 + 5*a3 + 4*a4 + 3*a5 + 2*a6 + 7*a7 + 6*a8 + 5*a9 + 4*a10 + 3*a11 + 2*a12;
+    var k = s % 11;
+    
+    if(k == 0 && a13 == 0){
+        return true;
+    }
+    if(k > 1 && a13 == 11-k){
+        return true;
+    }
+    else{
+        return false;
+    }
+    
 }
