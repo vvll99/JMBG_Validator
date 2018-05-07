@@ -37,6 +37,7 @@ function check(){
     } 
     
     getDayOfBirth();
+    getGender();
     
 }
 
@@ -83,4 +84,15 @@ function getDayOfBirth(){
     if(day <= 31 && month <= 12 && year <= 99){        
           birthDate.innerHTML = day + "." + month + "." + "2" + year + ".";
        }
+}
+
+function getGender(){
+    var jmbgValue = jmbg.value;
+    var res = jmbgValue.substr(9,3);
+    
+      if (res < 500){
+          gender.innerHTML = "Muski";
+      } else {
+          gender.innerHTML = "Ženski";
+      }
 }
