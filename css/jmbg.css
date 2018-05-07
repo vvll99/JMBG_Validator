@@ -1,0 +1,23 @@
+.button{
+    border-radius: 4px;
+    }
+
+input[type=text] {
+    background-color: #f5f5f0;
+    }
+
+div{
+    padding: 50px;
+}
+
+header{
+    background-color: #e0e0d1;
+    color: black;
+    padding: 5px;
+    height: 60px;
+}
+
+#massage{
+    color: red;
+}
+
