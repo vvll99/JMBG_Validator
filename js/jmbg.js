@@ -36,10 +36,19 @@ function check(){
         return
     } 
     
+    message.innerHTML = null;
     getDayOfBirth();
     getGender();
+    getPlace();
     
 }
+
+function resetFields(){
+    gender.innerHTML = null;
+    birthDate.innerHTML = null;
+    place.innerHTML = null;
+}
+
 
 function isControlValid(){
     var jmbgValue = jmbg.value;
@@ -95,4 +104,205 @@ function getGender(){
       } else {
           gender.innerHTML = "Ženski";
       }
+}
+
+function getPlace(){
+    var jmbgValue = jmbg.value;
+    var res = jmbgValue.substr(7,2);
+
+    if (res == 01){
+          place.innerHTML = "stranci u BiH ";
+   } 
+    if (res == 02){
+          place.innerHTML = "stranci u Crnoj Gori ";
+   }
+    if (res == 03){
+          place.innerHTML = "stranci u Hrvatskoj ";
+   }
+    if (res == 04){
+          place.innerHTML = "stranci u Makedoniji ";
+   }
+    if (res == 05){
+          place.innerHTML = "stranci u Sloveniji ";
+   }
+    if (res == 06){
+          place.innerHTML = " ";
+   }
+    if (res == 07){
+          place.innerHTML = "stranci u Srbiji (bez pokrajina) ";
+   }
+    if (res == 08){
+          place.innerHTML = "stranci u Vojvodini ";
+   }
+    if (res == 09){
+          place.innerHTML = " stranci na Kosovu";
+   }
+    if (res == 10){
+          place.innerHTML = " Banja Luka";
+   }
+    if (res == 11){
+          place.innerHTML = " Bihać";
+   }
+    if (res == 12){
+          place.innerHTML = " Doboj";
+   }
+    if (res == 13){
+          place.innerHTML = " Goražde";
+   }
+    if (res == 14){
+          place.innerHTML = " Livno";
+   }
+    if (res == 15){
+          place.innerHTML = " Mostar";
+   }
+    if (res == 16){
+          place.innerHTML = " Prijedor";
+   }
+    if (res == 17){
+          place.innerHTML = "Sarajevo ";
+   }
+    if (res == 18){
+          place.innerHTML = " Tuzla";
+   }
+    if (res == 19){
+          place.innerHTML = "Zenica ";
+   }
+    if (res == 21){
+          place.innerHTML = "Podgorica ";
+   }
+    if (res == 26){
+          place.innerHTML = "Nikšić ";
+   }
+    if (res == 29){
+          place.innerHTML = "Pljevlja ";
+   }
+    if (res == 30){
+          place.innerHTML = "Osijek, Slavonija ";
+   }
+    if (res == 31){
+          place.innerHTML = "Bjelovar, Virovitica, Koprivnica, Pakrac, Podravina";
+   }
+    if (res == 32){
+          place.innerHTML = "Varaždin, Međimurje";
+   }
+    if (res == 33){
+          place.innerHTML = "Zagreb ";
+   }
+    if (res == 34){
+          place.innerHTML = "Karlovac ";
+   }
+    if (res == 35){
+          place.innerHTML = "Gospić, Lika  ";
+   }
+    if (res == 36){
+          place.innerHTML = "Rijeka, Pula, Istra ";
+   }
+    if (res == 37){
+          place.innerHTML = "Sisak, Banovina ";
+   }
+    if (res == 38){
+          place.innerHTML = "Split, Zadar, Dubrovnik, Dalmacija ";
+   }
+    if (res == 39){
+          place.innerHTML = "Hrvatska ";
+   }
+    if (res == 41){
+          place.innerHTML = "Bitola ";
+   }
+    if (res == 42){
+          place.innerHTML = "Kumanovo ";
+   }
+    if (res == 43){
+          place.innerHTML = "Ohrid ";
+   }
+    if (res == 44){
+          place.innerHTML = "Prilep ";
+   }
+    if (res == 45){
+          place.innerHTML = "Skoplje ";
+   }
+    if (res == 46){
+          place.innerHTML = " Strumica";
+   }
+    if (res == 47){
+          place.innerHTML = " Tetovo";
+   }
+    if (res == 48){
+          place.innerHTML = "Veles ";
+   }
+    if (res == 49){
+          place.innerHTML = " Štip";
+   }
+    if (res >= 50 && res <= 59){
+          place.innerHTML = "Slovenija ";
+   }
+    if (res == 71){
+          place.innerHTML = "Grad Beograd: Stari Grad, Savski Venac, Voždovac, Vračar, Palilula, Zvezdara, Rakovica, Čukarica, Novi Beograd, Zemun, Mladenovac, Barajevo, Grocka, Obrenovac, Sopot, Lazarevac";
+   }
+    if (res == 72){
+          place.innerHTML = "Šumadijski okrug: Aranđelovac, Batočina, Knić, Kragujevac, Rača, Lapovo, Topola; Pomoravski okrug: Despotovac, Paraćin, Rekovac, Jagodina, Svilajnac, Ćuprija";
+   }
+    if (res == 73){
+          place.innerHTML = "Nišavski okrug: Aleksinac, Svrljig, Niš, Gadžin Han, Doljevac, Merošina, Ražanj; Pirotski okrug: Babušnica, Bela Palanka, Dimitrovgrad, Pirot; Toplički okrug: Blace, Žitorađa, Prokuplje, Kuršumlija ";
+   }
+    if (res == 74){
+          place.innerHTML = "Jablanički okrug: Leskovac, Vlasotince, Medveđa, Lebane, Bojnik, Crna Trava; Pčinjski okrug: Vranje, Bujanovac, Surdulica, Bosilegrad, Preševo, Trgovište, Vladičin Han ";
+   }
+    if (res == 75){
+          place.innerHTML = "Zaječarski okrug: Zaječar, Boljevac, Knjaževac, Sokobanja; Borski okrug: Bor, Majdanpek, Kladovo, Negotin ";
+   }
+    if (res == 76){
+          place.innerHTML = "Podunavski okrug: Smederevska Palanka, Velika Plana, Smederevo; Braničevski okrug: Veliko Gradište, Kučevo, Petrovac na Mlavi, Požarevac, Žagubica, Golubac, Žabari, Malo Crniće ";
+   }
+    if (res == 77){
+          place.innerHTML = "Mačvanski okrug: Loznica, Krupanj, Ljubovija, Šabac, Bogatić, Koceljeva, Vladimirci, Mali Zvornik; Kolubarski okrug: Valjevo, Lajkovac, Ljig, Ub, Osečina, Mionoca ";
+   }
+    if (res == 78){
+          place.innerHTML = "Raški okrug: Kraljevo, Vrnjačka Banja, Novi Pazar, Raška, Tutin; Moravički okrug: Gornji Milanovac, Čačak, Ivanjica, Lučani; Rasinski okrug: Aleksandrovac, Brus, Kruševac, Trstenik, Varvarin, Ćićevac ";
+   }
+    if (res == 79){
+          place.innerHTML = "Zlatiborski okrug: Arilje, Bajina Bašta, Kosjerić, Nova Varoš, Požega, Priboj, Prijepolje, Sjenica, Užice, Čajetina ";
+   }
+    if (res == 80){
+          place.innerHTML = "Južnobački okrug: Bač, Bačka Palanka, Bački Petrovac, Vrbas, Žabalj, Novi Sad, Srbobran, Sremski Karlovci, Temerin, Titel, Bečej, Beočin ";
+   }
+    if (res == 81){
+          place.innerHTML = "Zapadnobački okrug: Apatin, Kula, Odžaci, Sombor ";
+   }
+    if (res == 82){
+          place.innerHTML = "Severnobački okrug: Bačka Topola, Subotica, Mali Iđoš ";
+   }
+    if (res == 85){
+          place.innerHTML = "Srednjebanatski okrug: Zrenjanin, Nova Crnja, Novi Bečej, Sečanj, Žitište";
+   }
+    if (res == 86){
+          place.innerHTML = "Južnobanatski okrug: Alibunar, Bela Crkva, Vršac, Kovačica, Kovin, Pančevo, Opovo, Plandište";
+   }
+    if (res == 87){
+          place.innerHTML = "Severnobanatski okrug: Ada, Kikinda, Kanjiža, Novi Kneževac, Senta, Čoka";
+   }
+    if (res == 88){
+          place.innerHTML = "Sremski okrug: Inđija, Pećinci, Ruma, Sremska Mitrovica, Stara Pazova, Šid, Irig";
+   }
+    if (res == 89){
+          place.innerHTML = "Sremski okrug: Inđija, Pećinci, Ruma, Sremska Mitrovica, Stara Pazova, Šid, Irig ";
+   }
+    if (res == 91){
+          place.innerHTML = "Kosovski okrug: Priština, Obilić, Podujevo, Štrpce, Lipljan, Glogovac, Kačanik, Kosovo Polje, Uroševac, Štimlje ";
+   }
+    if (res == 92){
+          place.innerHTML = "Kosovsko Mitrovački okrug: Kosovska Mitrovica, Zvečan, Leposavić, Zubin Potok, Vučitrn, Srbica ";
+   }
+    if (res == 93){
+          place.innerHTML = "Pećki okrug: Peć, Istok, Klina";
+   }
+    if (res == 94){
+          place.innerHTML = "Pećki okrug: Dečani, Đakovica ";
+   }
+    if (res == 95){
+          place.innerHTML = "Prizrenski okrug: Gora-Dragaš, Orahovac, Prizren, Suva Reka";
+   }
+    if (res == 96){
+          place.innerHTML = "Gnjilane, Kosovska Kamenica, Vitina, Novo Brdo ";
+   }    
 }
